@@ -5,7 +5,7 @@ public class Creature {
 	private String power;
 	private String type;
 	
-	public Creature() {
+	/*public Creature() {
 		super();
 	}
 	
@@ -14,7 +14,7 @@ public class Creature {
 		this.name = name;
 		this.power = power;
 		this.type = type;
-	}
+	}*/
 
 	public String getName() {
 		return name;

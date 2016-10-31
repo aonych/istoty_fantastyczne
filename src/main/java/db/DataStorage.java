@@ -7,15 +7,49 @@ import model.Creature;
 
 public class DataStorage {
 	
-	private List<Creature> db = new ArrayList<Creature>();
+	private List<Creature> creatures = new ArrayList<Creature>();
 	
 	public void add(Creature creature){
-		Creature newIstota = new Creature(creature.getName(), creature.getPower(), creature.getType());
-		db.add(newIstota);
+		try{
+			creatures.add(creature);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public List<Creature> getAllCreatures(){
-		return db;
+		return creatures;
 	}
+	
+	public void delete(String name){}
+	
+	public Creature getByName(String name){
+		
+		Creature creature = null;
+		
+		try {
+        	
+			for(Creature character : creatures){
+
+				if(character.getName().equals(name)){
+					creature = character;
+					
+					break;
+				}
+
+			}
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+		
+		return creature;
+		
+	}
+	
+	public void update(String name){
+		
+	}
+	
 
 }

@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app id="WebApp_ID" version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+<display-name>IstotyFantastyczne</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>CreatureController</display-name>
+    <servlet-name>CreatureController</servlet-name>
+    <servlet-class>controller.CreatureController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreatureController</servlet-name>
+    <url-pattern>/CreatureController</url-pattern>
+  </servlet-mapping>
+  <jsp-config>
+    <jsp-property-group>
+        <url-pattern>*.jsp</url-pattern>
+        <page-encoding>UTF-8</page-encoding>
+    </jsp-property-group>
+  </jsp-config>
 </web-app>
