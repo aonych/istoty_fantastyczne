@@ -1,6 +1,7 @@
 package db;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import model.Creature;
@@ -21,7 +22,27 @@ public class DataStorage {
 		return creatures;
 	}
 	
-	public void delete(String name){}
+	public void delete(String creatureName){
+		Iterator<Creature> c = creatures.iterator();
+		
+		String name = creatureName.trim();
+		
+        try {
+        	
+        	while (c.hasNext()) {
+
+        	    if (c.next().getName().equals(name)) {
+
+        	        c.remove();
+        	        break;
+        	    }
+
+        	}
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+	}
 	
 	public Creature getByName(String name){
 		

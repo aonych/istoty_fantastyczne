@@ -28,8 +28,8 @@
 </head>
 <body>
 
-<!--<jsp:useBean id="db" class="db.DataStorage" scope="application" />-->
-
+<!-- <jsp:useBean id="db" class="db.DataStorage" scope="application" /> -->
+            
 <table>
         <thead>
             <tr >
@@ -44,6 +44,9 @@
                     <td><c:out value="${creature.name}" /></td>
                     <td><c:out value="${creature.type}" /></td>
                     <td><c:out value="${creature.power}" /></td>
+                    <td><a href="CreatureController?action=edit&name=<c:out value="${creature.name}"/>&type=<c:out value="${creature.type}"/>&power=<c:out value="${creature.power}"/>">Edytuj</a></td>
+                    <td><a onclick="return confirm('Na pewno chcesz usunąć rekord?')" 
+                    href="CreatureController?action=delete&name= <c:out value="${creature.name}"/>">Usuń</a></td>
                 </tr>
             </c:forEach>
         </tbody>

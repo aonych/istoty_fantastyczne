@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -28,10 +29,10 @@
 <jsp:useBean id="db" class="db.DataStorage" scope="application" />-->
 
 <form method="POST" action="CreatureController">
-  Nazwa: <input type="text" name="name" value="${creature.name}" /><br /> <br>
-  Gatunek: <input type="text"  name="type" value="${creature.type}" /><br /> <br>
-  Moc: <input type="text"  name="power" value="${creature.power}" /><br /> <br>
-  <input type="submit" value=" Dodaj ">
+  Nazwa:<input type="text" name="name" value="${creature.name}" /><br /> <br>
+  Gatunek:<input type="text"  name="type" value="${creature.type}" /><br /> <br>
+  Moc:<input type="text"  name="power" value="${creature.power}" /><br /> <br>
+  <input type="submit" value=" Zatwierdź ">
   <a href="CreatureController?action=showAll"><input type="button" value="Wyświetl wszystko"/></a>
 </form> 
 

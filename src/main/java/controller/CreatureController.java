@@ -67,11 +67,8 @@ public class CreatureController extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	Creature creature = new Creature();
-    	//System.out.println(request.getParameter("name"));
         creature.setName(request.getParameter("name"));
-        //System.out.println(request.getParameter("type"));
         creature.setType(request.getParameter("type"));
-        //System.out.println(request.getParameter("power"));
         creature.setPower(request.getParameter("power"));
         
     	/*String creatureName = request.getParameter("name");
