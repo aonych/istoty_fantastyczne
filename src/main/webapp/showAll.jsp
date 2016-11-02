@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="model.Creature"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -29,7 +29,11 @@
 <body>
 
 <!-- <jsp:useBean id="db" class="db.DataStorage" scope="application" /> -->
-            
+<jsp:useBean id="creature" class="model.Creature" scope="session" /> 
+<jsp:setProperty name="creature" property="*" />    
+
+<p>Ostatnio dodana istota fantastyczna: <b><i><jsp:getProperty property="name" name="creature"/></i></b></p>
+
 <table>
         <thead>
             <tr >
@@ -54,6 +58,7 @@
 
 <p>
   <a href="CreatureController?action=add"><input type="button" value="Dodaj"/></a>
+  <a href="home.jsp"><input type="button" value="Wróć"/></a>
 </p>
 
 </body>

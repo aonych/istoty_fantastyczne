@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Dodaj istotę</title>
+<title>Edytuj istotę</title>
         <style>
 
 			html,body{
@@ -22,15 +22,12 @@
 </head>
 <body>
 
-<jsp:useBean id="creature" class="model.Creature" scope="session" /> 
-<jsp:useBean id="db" class="db.DataStorage" scope="application" />
-
-<p><i><b>Wszystkie pola w formularzu muszą być wypełnione.</b></i></p><br>
+<!-- <p><i><b>Wszystkie pola w formularzu muszą być wypełnione.</b></i></p><br> -->
 
 <form method="POST" action="CreatureController">
-  Nazwa:<input type="text" name="name" required/><br /> <br>
-  Gatunek:<input type="text"  name="type" required/><br /> <br>
-  Moc:<input type="text"  name="power" required/><br /> <br>
+  Nazwa:<input type="text" name="name" value="${creature.name}" readonly="readonly"/><br /> <br>
+  Gatunek:<input type="text"  name="type" value="${creature.type}" required/><br /> <br>
+  Moc:<input type="text"  name="power" value="${creature.power}" required/><br /> <br>
   <input type="submit" value=" Zatwierdź ">
   <a href="CreatureController?action=showAll"><input type="button" value="Wyświetl wszystko"/></a>
 </form> 

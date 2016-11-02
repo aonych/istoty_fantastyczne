@@ -22,23 +22,19 @@ public class DataStorage {
 		return creatures;
 	}
 	
+	
 	public void delete(String creatureName){
 		Iterator<Creature> c = creatures.iterator();
 		
 		String name = creatureName.trim();
 		
-        try {
-        	
+        try {       	
         	while (c.hasNext()) {
-
         	    if (c.next().getName().equals(name)) {
-
         	        c.remove();
         	        break;
         	    }
-
         	}
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -48,29 +44,18 @@ public class DataStorage {
 		
 		Creature creature = null;
 		
-		try {
-        	
+		try {       	
 			for(Creature character : creatures){
-
 				if(character.getName().equals(name)){
-					creature = character;
-					
+					creature = character;					
 					break;
 				}
-
 			}
-
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }		
 		
-		return creature;
-		
+		return creature;		
 	}
-	
-	public void update(String name){
-		
-	}
-	
 
 }

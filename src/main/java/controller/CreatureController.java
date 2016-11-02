@@ -16,6 +16,7 @@ public class CreatureController extends HttpServlet {
     private static String ADD = "/addCreature.jsp";
     private static String SHOW_ALL = "/showAll.jsp";
     private static String HOME = "/home.jsp";
+    private static String EDIT = "/editCreature.jsp";
     private DataStorage db;
     
     public CreatureController() {
@@ -34,7 +35,7 @@ public class CreatureController extends HttpServlet {
         	
         	forward = SHOW_ALL;
             request.setAttribute("creatures", db.getAllCreatures());
-            
+        
         } else if (action.equalsIgnoreCase("delete")){
         	
             forward = SHOW_ALL;
@@ -44,7 +45,7 @@ public class CreatureController extends HttpServlet {
             
         } else if (action.equalsIgnoreCase("edit")){
         	
-                forward = ADD;
+                forward = EDIT;
                 String name = request.getParameter("name");
                 Creature Creature = db.getByName(name);
                 request.setAttribute("creature", Creature);
@@ -71,16 +72,14 @@ public class CreatureController extends HttpServlet {
         creature.setType(request.getParameter("type"));
         creature.setPower(request.getParameter("power"));
         
-    	/*String creatureName = request.getParameter("name");
+    	String creatureName = request.getParameter("name");
         
-        if(creatureName != null){
+        if(creatureName == null || creatureName.isEmpty()){
         	db.add(creature);
-        	System.out.println("Dodalo!");
         }else{
-        	System.out.println("Puste pola!");
-        }*/
-
-        db.add(creature);
+        	db.delete(creatureName);
+        	db.add(creature);
+        }
         
        RequestDispatcher view = request.getRequestDispatcher(SHOW_ALL);
        request.setAttribute("creatures", db.getAllCreatures());
