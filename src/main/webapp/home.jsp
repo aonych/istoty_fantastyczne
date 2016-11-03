@@ -24,9 +24,12 @@
     <body>
 	    <h2>Witaj w świecie istot fantastycznych!</h2>
 	    <p>Znajdziesz tu bazę danych istot nie z tego świata. Możesz zobaczyć listę 
-	    wszystkich postaci, usuwać je, dodawać nowe oraz edytować istniejące.</p><br><br>
+	    wszystkich postaci, usuwać je, dodawać nowe oraz edytować istniejące. Dodatkowo możesz zobaczyć listę przykładowych 
+	    gatunków fantastycznych stworzeń oraz rozwiązać quiz. Udanej zabawy. :)</p><br><br>
 	    <a href="CreatureController?action=add"><input type="button" value="Dodaj"/></a><br><br>
 	    <a href="CreatureController?action=showAll"><input type="button" value="Wyświetl wszystko"/></a><br><br>
+	    <p><a href="types">Zobacz listę gatunków</a></p>
+	    <p><a href="quiz">Rozwiąż quiz</a></p>
     </body>
     
 </html>

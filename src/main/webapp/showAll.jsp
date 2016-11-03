@@ -29,10 +29,10 @@
 <body>
 
 <!-- <jsp:useBean id="db" class="db.DataStorage" scope="application" /> -->
-<jsp:useBean id="creature" class="model.Creature" scope="session" /> 
-<jsp:setProperty name="creature" property="*" />    
+<jsp:useBean id="creaturename" class="model.Creature" scope="session" /> 
+<jsp:setProperty name="creaturename" property="*" />    
 
-<p>Ostatnio dodana istota fantastyczna: <b><i><jsp:getProperty property="name" name="creature"/></i></b></p>
+<p>Ostatnio dodana istota fantastyczna: <b><i><jsp:getProperty property="name" name="creaturename"/></i></b></p>
 
 <table>
         <thead>
