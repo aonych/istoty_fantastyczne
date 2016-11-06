@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -29,7 +29,7 @@
   Gatunek:<input type="text"  name="type" value="${creature.type}" required/><br /> <br>
   Moc:<input type="text"  name="power" value="${creature.power}" required/><br /> <br>
   <input type="submit" value=" Zatwierdź ">
-  <a href="CreatureController?action=showAll"><input type="button" value="Wyświetl wszystko"/></a>
+  <input onclick="window.location.href='CreatureController?action=showAll'" type="button" value="Wyświetl wszystko"/>
 </form> 
 
 </body>

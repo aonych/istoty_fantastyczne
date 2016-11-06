@@ -19,8 +19,10 @@ public class TypesServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		PrintWriter out = response.getWriter();
-		out.println("<html>"
+		out.println("<!DOCTYPE html>"
+				+ "<html>"
 				+"<head>"
+				+ "<title>Gatunki</title>"
 				+ "<style>"
 				+ "html,body{"
 				+ "margin: 0;"
@@ -66,7 +68,7 @@ public class TypesServlet extends HttpServlet {
 				+ "<tr><td>elf</td></tr>"
 				+ "</tbody>"
 				+ "</table>"
-				+ "<br><br><a href='home.jsp'><input type='button' value='Strona glowna'/></a>"
+				+ "<br><br><p><a href='home.jsp'>Strona glowna</a></p>"
 				+ "</body></html>");
 		out.close();
 		

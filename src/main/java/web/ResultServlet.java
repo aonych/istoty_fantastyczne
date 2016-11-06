@@ -79,8 +79,10 @@ public class ResultServlet extends HttpServlet {
 			creature = "wampir";
 		}
 		
-		out.println("<html>"
+		out.println("<!DOCTYPE html>"
+				+ "<html>"
 				+"<head>"
+				+ "<title>Wyniki</title>"
 				+ "<style>"
 				+ "html,body{"
 				+ "margin: 0;"
@@ -94,8 +96,9 @@ public class ResultServlet extends HttpServlet {
 				+ "</style>"
 				+ "</head>"
 				+ "<body><h2>Wynik quizu</h2>"
-				+ "<p>Istota, ktora najbardziej do Ciebie pasuje to: <b><i>" + creature + "</i></b><br><br />" 
-				+ "<a href='home.jsp'><input type='button' value='Strona glowna'/></a>"
+				+ "<p>Istota, ktora najbardziej do Ciebie pasuje to: <b><i>" + creature + "</i></b><br><br />"
+			    + "<p><a href='quiz'>Rozwiaz quiz jeszcze raz</a></p>"
+			    + "<p><a href='home.jsp'>Strona glowna</a></p>"
 				+ "</body></html>");
 		out.close();
 		

@@ -19,8 +19,10 @@ public class QuizServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		PrintWriter out = response.getWriter();
-		out.println("<html>"
+		out.println("<!DOCTYPE html>"
+				+ "<html>"
 				+"<head>"
+				+ "<title>Quiz</title>"
 				+ "<style>"
 				+ "html,body{"
 				+ "margin: 0;"

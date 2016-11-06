@@ -26,11 +26,11 @@ public class DataStorage {
 	public void delete(String creatureName){
 		Iterator<Creature> c = creatures.iterator();
 		
-		String name = creatureName.trim();
+		//String name = creatureName.trim();
 		
         try {       	
         	while (c.hasNext()) {
-        	    if (c.next().getName().equals(name)) {
+        	    if (c.next().getName().equals(creatureName)) {
         	        c.remove();
         	        break;
         	    }

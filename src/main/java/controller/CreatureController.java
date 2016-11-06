@@ -55,13 +55,6 @@ public class CreatureController extends HttpServlet {
             
         }
 
-        /*if (action.equalsIgnoreCase("showAll")){
-            forward = SHOW_ALL;
-            request.setAttribute("creatures", db.getAllCreatures());
-        } else {
-            forward = ADD;
-        }*/
-
         RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
     }
@@ -83,8 +76,6 @@ public class CreatureController extends HttpServlet {
         
        RequestDispatcher view = request.getRequestDispatcher(SHOW_ALL);
        request.setAttribute("creatures", db.getAllCreatures());
-       //request.getRequestDispatcher("showAll.jsp").
-       //forward(request, response);
        view.forward(request, response);
     }
 }

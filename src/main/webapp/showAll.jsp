@@ -30,9 +30,9 @@
 
 <!-- <jsp:useBean id="db" class="db.DataStorage" scope="application" /> -->
 <jsp:useBean id="creaturename" class="model.Creature" scope="session" /> 
-<jsp:setProperty name="creaturename" property="*" />    
+<jsp:setProperty name="creaturename" property="*" />
 
-<p>Ostatnio dodana istota fantastyczna: <b><i><jsp:getProperty property="name" name="creaturename"/></i></b></p>
+<p>Ostatnio dodana lub modyfikowana istota fantastyczna: <b><i><jsp:getProperty property="name" name="creaturename"/></i></b></p>
 
 <table>
         <thead>
@@ -50,15 +50,15 @@
                     <td><c:out value="${creature.power}" /></td>
                     <td><a href="CreatureController?action=edit&name=<c:out value="${creature.name}"/>&type=<c:out value="${creature.type}"/>&power=<c:out value="${creature.power}"/>">Edytuj</a></td>
                     <td><a onclick="return confirm('Na pewno chcesz usunąć rekord?')" 
-                    href="CreatureController?action=delete&name= <c:out value="${creature.name}"/>">Usuń</a></td>
+                    href="CreatureController?action=delete&name=<c:out value="${creature.name}"/>">Usuń</a></td>
                 </tr>
             </c:forEach>
         </tbody>
     </table>
 
 <p>
-  <a href="CreatureController?action=add"><input type="button" value="Dodaj"/></a>
-  <a href="home.jsp"><input type="button" value="Wróć"/></a>
+  <input onclick="window.location.href='CreatureController?action=add'" type="button" value="Dodaj"/>
+  <input onclick="window.location.href='home.jsp'" type="button" value="Wróć"/>
 </p>
 
 </body>

@@ -5,17 +5,6 @@ public class Creature {
 	private String power;
 	private String type;
 	
-	/*public Creature() {
-		super();
-	}
-	
-	public Creature(String name, String power, String type) {
-		super();
-		this.name = name;
-		this.power = power;
-		this.type = type;
-	}*/
-
 	public String getName() {
 		return name;
 	}
